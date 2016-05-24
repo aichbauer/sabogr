@@ -3,6 +3,9 @@
 a [Sails](http://sailsjs.org) application template
 with [AngularJS](https://angularjs.org/), [Bootstrap](http://getbootstrap.com/).
 
+##.gitignore
+You can uncomment bower_components on line 70 on the .gitignore file. If you don't want to push your bower_components.
+
 ## assets folder
 
 This folder is your public resource which gets pushed into the .tmp folder.
