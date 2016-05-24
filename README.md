@@ -58,7 +58,7 @@ the path to your file under the bootstrap line (see example).
 ```json
 "sources" : {
       "bootstrap" : "bower_components/bootstrap/dist/css/bootstrap.css",
-      "example": "bower_components/bootstrap/dist/css/example.css"
+      "example": "bower_components/example/css/example.css"
     }
 ```
 
