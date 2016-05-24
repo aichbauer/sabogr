@@ -3,6 +3,17 @@
 a [Sails](http://sailsjs.org) application template
 with [AngularJS](https://angularjs.org/), [Bootstrap](http://getbootstrap.com/).
 
+## Getting started
+
+You need to have node and sails installed globaly. 
+[Node.js](https://nodejs.org/en/) and [Sails.js](http://sailsjs.org/).
+
+Go to your project or working directory and run the following command.
+
+`sails new yourProjectName`
+
+Now simply merge this project into yours.
+
 ##.gitignore
 You can uncomment bower_components on line 70 on the .gitignore file. If you don't want to push your bower_components.
 
