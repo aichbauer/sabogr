@@ -26,15 +26,15 @@ var cssFilesToInject = [
 var jsFilesToInject = [
 
 
-  // Dependencies like jQuery, or Angular are brought in here
+  // Dependencies like Angular and Bootstrap are brought in here
   '_js/**/*.js',
 
   //load all modules for angular
   'js/modules/**/*.js',
 
   // All source files for angular are inside here
-  'js/**/*.js',
-  'js/*.js',
+  'src/**/*.js',
+  'src/*.js',
 
 ];
 
