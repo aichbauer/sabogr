@@ -5,7 +5,7 @@ with [AngularJS](https://angularjs.org/), [Bootstrap](http://getbootstrap.com/).
 
 ## Getting started
 
-You need to have node and sails installed globaly. 
+You need to have node and sails installed globaly.
 [Node.js](https://nodejs.org/en/) and [Sails.js](http://sailsjs.org/).
 
 Go to your project or working directory and run the following command.
@@ -44,6 +44,26 @@ Call the following command in your assets folder
 
 Now only angular.js and bootstra.css is loaded in the folders that gets loaded into the .tmp folder.
 
+Every time you install new components run this command again.
+
+## Bower Installer does not load every file to my folder
+
+If that is the case you can specify your file that is not loading into the right folder manually.
+
+open the bower.json file in your assets folder.
+
+Bootstrap.css does not load automatically in that folder so I configured it manually.
+If some packages you installed does not load automatically simply add your name and
+the path to your file under the bootstrap line (see example).
+```json
+"sources" : {
+      "bootstrap" : "bower_components/bootstrap/dist/css/bootstrap.css",
+      "example": "bower_components/bootstrap/dist/css/example.css"
+    }
+```
+
+Run `bower-installer` again.
+
 ### Sails lift grunt tasks
 
 What happens when you `sails lift` your server?
@@ -62,7 +82,7 @@ var cssFilesToInject = [
 ];
 
 // The Js files from our bower components
-var jsFilesToInject = [
+var jFilesToInject = [
   // Dependencies like Angular and Bootstrap are brought in here,
   // this loads all our js files which gets automatically
   // loaded into the _js dir when you execute bower-installer
