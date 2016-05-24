@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Title</title>
   <!--STYLES-->
   <!--STYLES END-->
 </head>
 <body>
 HELLO WORLD!
+
+<div class="app-body">
+  <!-- if the user is loggedin -->
+  <div data-ui-view></div>
+  <!-- if the user is not loggedin -->
+  <div class="view-header" data-ui-view="header"></div>
+  <div class="view-main" data-ui-view="main"></div>
+  <div class="view-footer" data-ui-view="footer"></div>
+</div>
 
 <!--SCRIPTS-->
 <!--SCRIPTS END-->
