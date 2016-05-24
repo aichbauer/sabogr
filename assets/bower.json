@@ -19,12 +19,19 @@
       "js": "_js/",
       "css": "_css/"
     },
-    "sources" : {
-      "bootstrap" : "bower_components/bootstrap/dist/css/bootstrap.css"
+    "sources": {
+      "bootstrap": "bower_components/bootstrap/dist/css/bootstrap.css",
+      "lodash": "bower_components/lodash/lodash.js"
     }
   },
   "dependencies": {
     "angular": "^1.5.5",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "angular-cookies": "^1.5.3",
+    "angular-local-storage": "^0.2.2",
+    "lodash": "^4.13.1",
+    "restangular": "^1.5.2",
+    "angular-ui-router": "^0.3.0",
+    "moment": "^2.13.0"
   }
 }
