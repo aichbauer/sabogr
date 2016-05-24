@@ -1,6 +1,6 @@
 # Sabogr
 ####Sails Angular Bower Grunt
-#####Ready to use Sails Anular App with authentication
+#####Ready to use Sails Angular App with authentication
 
 a [Sails](http://sailsjs.org) application template
 with [AngularJS](https://angularjs.org/), [Bootstrap](http://getbootstrap.com/).
