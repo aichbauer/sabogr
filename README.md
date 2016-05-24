@@ -14,9 +14,6 @@ Go to your project or working directory and run the following command.
 
 Now simply merge this project into yours.
 
-##.gitignore
-You can uncomment bower_components on line 70 on the .gitignore file. If you don't want to push your bower_components.
-
 ## assets folder
 
 This folder is your public resource which gets pushed into the .tmp folder.
