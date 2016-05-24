@@ -27,6 +27,8 @@ var jsFilesToInject = [
 
 
   // Dependencies like Angular and Bootstrap are brought in here
+  '_js/angular/*.js',
+  '_js/jquery/*.js',
   '_js/**/*.js',
 
   //load all modules for angular
@@ -49,7 +51,8 @@ var jsFilesToInject = [
 // templates get spit out to the same file.  Be sure and check out `tasks/README.md`
 // for information on customizing and installing new tasks.
 var templateFilesToInject = [
-  'templates/**/*.html'
+  'src/**/*.html',
+  'src/*.html'
 ];
 
 
