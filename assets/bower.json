@@ -1,0 +1,30 @@
+{
+  "name": "assets",
+  "authors": [
+    "Lukas Aichbauer <[omitted]>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "install": {
+    "path": {
+      "js": "_js/",
+      "css": "_css/"
+    },
+    "sources" : {
+      "bootstrap" : "bower_components/bootstrap/dist/css/bootstrap.css"
+    }
+  },
+  "dependencies": {
+    "angular": "^1.5.5",
+    "bootstrap": "^3.3.6"
+  }
+}
