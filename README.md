@@ -72,7 +72,7 @@ When you run `grunt` or `sails lift`the Gruntfile.js in your root directory gets
 
 Which files and in what order your files should get loaded are defined in the pipeline.js in your tasks folder.
 
-The author changed the files which should get loaded in this file and in that order that your angular app will work instantly.
+The author changed the files which should get loaded in this file and in that order that your angular app will work instantly. Also our own styles, which live in our assets/style folder are loaded to the .tmp folder.
 
 ```js
 // The CSS files from our bower components
