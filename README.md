@@ -28,6 +28,8 @@ Have bower, bower-installer installed globally.
 This folder is your public resource which gets pushed into the .tmp folder.
 The .tmp folder is visible for your clients.
 
+Run `bower install` and `sails lift` and your Sails.js, AngularJS app is ready.
+
 ### Installing bower components
 
 Inside of the assets folder you can now install new bower packages with
