@@ -23,9 +23,9 @@ Have bower, bower-installer installed globally.
 
 `npm install -g bower` and `npm install -g bower-installer`
 
-## assets folder
+#####  assets folder
 
-This folder is your public resource which gets pushed into the .tmp folder.
+This folder is your public resource which gets pushed by the Gruntfile.js in you root folder into the .tmp folder.
 The .tmp folder is visible for your clients.
 
 Run `bower install` and `sails lift` and your Sails.js, AngularJS app is ready.
