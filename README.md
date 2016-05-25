@@ -38,7 +38,7 @@ Your packages are saved inside of the 'assets/bower_components' directory.
 
 ### Load only the needed recources to .tmp
 
-We use bower-installer to load the needed resources to our 'assets/_js', 'assets/_css' and 'assets/style' directory.
+We use bower-installer to load the needed resources to our 'assets/_js', 'assets/_css' directory.
 
 Call the following command in your assets folder
 
