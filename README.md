@@ -48,7 +48,7 @@ Call the following command in your assets folder
 
 Every time you install new components run this command again.
 
-## Bower Installer does not load every file to my folder
+### Bower Installer does not load every file to my folder
 
 If that is the case you can specify your file that is not loading into the right folder manually.
 
