@@ -12,27 +12,24 @@
  */
 
 
-// CSS files to inject in order
-//
-// (if you're using LESS with the built-in default config, you'll want
-//  to change `assets/styles/importer.less` instead.)
+// The CSS files from our bower components
 var cssFilesToInject = [
   '_css/**/*.css'
 ];
 
-
-// Client-side javascript files to inject in order
-// (uses Grunt-style wildcard/glob/splat expressions)
+// The Js files from our bower components
+//And our Angular application
 var jsFilesToInject = [
-
 
   // Dependencies like Angular and Bootstrap are brought in here
   '_js/angular/*.js',
   '_js/jquery/*.js',
+  '_js/bootstrap/*.js',
   '_js/**/*.js',
 
-  //load all modules for angular
-  'js/modules/**/*.js',
+  //load our application init file and all modules for angular
+  'src/app/*.js',
+  'src/modules/**/*.js',
 
   // All source files for angular are inside here
   'src/**/*.js',
