@@ -19,6 +19,7 @@ Now simply merge this project into yours.
 ## assets folder
 
 This folder is your public resource which gets pushed into the .tmp folder.
+The .tmp folder is visible for your clients.
 
 ### Installing bower components
 
@@ -84,20 +85,23 @@ var cssFilesToInject = [
 ];
 
 // The Js files from our bower components
-var jFilesToInject = [
-  // Dependencies like Angular and Bootstrap are brought in here,
-  // this loads all our js files which gets automatically
-  // loaded into the _js dir when you execute bower-installer
+//And our Angular application
+var jsFilesToInject = [
+
+  // Dependencies like Angular and Bootstrap are brought in here
+  '_js/angular/*.js',
+  '_js/jquery/*.js',
+  '_js/bootstrap/*.js',
   '_js/**/*.js',
 
-  //load all modules for angular, to make sure your angular model exists,
-  // since grunt loads the files in alapetical order
-  'js/modules/**/*.js',
+  //load our application init file and all modules for angular
+  'src/app/*.js',
+  'src/modules/**/*.js',
 
   // All source files for angular are inside here
-  //the rest of our application
   'src/**/*.js',
   'src/*.js',
 
-];```
+];
+```
 
