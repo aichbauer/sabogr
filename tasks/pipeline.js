@@ -14,6 +14,7 @@
 
 // The CSS files from our bower components
 var cssFilesToInject = [
+  '_css/bootstrap/*.css',
   '_css/**/*.css',
   'style/**/*.css'
 ];
