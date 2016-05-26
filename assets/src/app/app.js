@@ -3,8 +3,10 @@ angular.module('app', [
   'LocalStorageModule',
   'restangular',
   'ngCookies',
+  'ngMaterial',
   'pages',
-  'service'
+  'service',
+  'cmps'
 ]);
 
 angular
@@ -23,10 +25,11 @@ config.$inject = [
   '$stateProvider',
   '$urlRouterProvider',
   'localStorageServiceProvider',
-  'RestangularProvider'
+  'RestangularProvider',
+  '$mdThemingProvider'
 ];
 
-function config ($stateProvider, $urlRouterProvider, localStorageServiceProvider, RestangularProvider) {
+function config ($stateProvider, $urlRouterProvider, localStorageServiceProvider, RestangularProvider, $mdThemingProvider) {
   var $cookies;
 
   angular.injector(['ngCookies']).invoke(['$cookies', function(_$cookies_) {
@@ -43,6 +46,25 @@ function config ($stateProvider, $urlRouterProvider, localStorageServiceProvider
       'Content-Type': 'application/x-www-form-urlencoded',
       Authorization: 'Bearer '+ $cookies.get('tkn_u')
     });
+
+  $mdThemingProvider.definePalette('sabogr-theme', {
+    '50': 'E0F2F1',
+    '100': 'ffffff',
+    '200': 'ffffff',
+    '300': 'ffffff',
+    '400': 'ffffff',
+    '500': '009688',
+    '600': 'e53935',
+    '700': 'd32f2f',
+    '800': 'c62828',
+    '900': 'b71c1c',
+    'A100': 'ff8980',
+    'A200': 'ff5252',
+    'A400': 'ff1744',
+    'A700': 'E0F2F1',
+  });
+  $mdThemingProvider.theme('default')
+    .primaryPalette('sabogr-theme');
 
   $urlRouterProvider.when('', '/');
   $urlRouterProvider.otherwise('/error');
