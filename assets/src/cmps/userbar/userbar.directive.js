@@ -21,7 +21,7 @@ function navbarDirective() {
             // restrict: 'A', // E = Element, A = Attribute, C = Class, M = Comment
             // template: '',
             templateUrl: 'src/cmps/userbar/userbar.html',
-            replace: true,
+            replace: false,
             // transclude: true,
             // compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
             link: function($scope, iElm, iAttrs, controller) {
