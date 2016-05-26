@@ -13,6 +13,7 @@ module.exports = {
 
     username: {
       type: 'string',
+      unique: true,
       required: true
     },
 
@@ -39,13 +40,21 @@ module.exports = {
     User.findOne({email: values.email})
       .then(function (user) {
         if (!user) {
-          cb();
+          User.findOne({username: values.username})
+            .then(function(user){
+              if(!user){
+                cb();
+              }
+              else {
+                cb('username is already taken!');
+              }
+            })
         } else {
           cb('email is already taken!');
         }
       })
       .fail(function (err) {
-        console.log('Error while checking email adresses from users:');
+        console.log('Error while checking email address and username from users:');
         console.log(err);
       });
   },
