@@ -5,6 +5,8 @@
  * @docs        :: http://sailsjs.org/documentation/concepts/models-and-orm/models
  */
 
+var bcrypt = require('bcrypt-nodejs');
+
 module.exports = {
 
   attributes: {
@@ -22,10 +24,7 @@ module.exports = {
 
     password: {
       type: 'string',
-      required: true,
-      defaultsTo: function () {
-        return User.generatePassword();
-      }
+      required: true
     },
 
     toJSON: function () {
@@ -34,6 +33,52 @@ module.exports = {
       return obj;
     }
 
-  }
+  },
+
+  beforeValidate: function (values, cb) {
+    User.findOne({email: values.email})
+      .then(function (user) {
+        if (!user) {
+          cb();
+        } else {
+          cb('email is already taken!');
+        }
+      })
+      .fail(function (err) {
+        console.log('Error while checking email adresses from users:');
+        console.log(err);
+      });
+  },
+
+  beforeCreate: function (user, cb) {
+    bcrypt.genSalt(10, function (err, salt) {
+      bcrypt.hash(user.password, salt, null, function (err, hash) {
+        if (err) {
+          console.log(err);
+        } else {
+          user.password = hash;
+        }
+        cb();
+      });
+    });
+  },
+
+  comparePassword: function (password, user, cb) {
+    bcrypt.compare(password, user.password, function (err, match) {
+      if (err) {
+        cb(err);
+      } else {
+        if (match) {
+          cb(null, true);
+        } else {
+          cb(null, false);
+        }
+      }
+    });
+  },a
+
 };
+
+
+
 
